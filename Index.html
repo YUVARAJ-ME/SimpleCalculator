@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="calculator-box" class="calculator">
+        <button id="history-toggle" class="history-btn">&#8942;</button>
+        <div class="input-container">
+            <input type="text" id="result" disabled>
+        </div>
+        <div class="buttons">
+            <button class="calc-btn">1</button>
+            <button class="calc-btn">2</button>
+            <button class="calc-btn">3</button>
+            <button class="calc-btn">+</button>
+            <button class="calc-btn">4</button>
+            <button class="calc-btn">5</button>
+            <button class="calc-btn">6</button>
+            <button class="calc-btn">-</button>
+            <button class="calc-btn">7</button>
+            <button class="calc-btn">8</button>
+            <button class="calc-btn">9</button>
+            <button class="calc-btn">*</button>
+            <button class="calc-btn">C</button>
+            <button class="calc-btn">0</button>
+            <button class="calc-btn equals">=</button>
+            <button class="calc-btn">/</button>
+        </div>
+        <div class="control-buttons">
+            <button id="on-btn" class="on-btn">ON</button>
+            <button id="off-btn" class="off-btn">OFF</button>
+        </div>
+    </div>
+
+    <div id="history-box" class="history-box hidden">
+        <h3>History</h3>
+        <ul id="history-list"></ul>
+        <button id="clear-history-btn" class="clear-history-btn">Clear</button>
+        <button id="back-btn" class="back-btn">Back</button>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
