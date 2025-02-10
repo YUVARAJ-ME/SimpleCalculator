@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
+}
+
+/* Calculator Box */
+.calculator {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    position: relative;
+}
+
+/* Three Dots (History Button) */
+.history-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Input Field */
+.input-container {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.calc-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: #f2f2f2;
+    cursor: pointer;
+}
+
+.calc-btn:hover {
+    background: #ddd;
+}
+
+.equals {
+    background: #ff7e5f;
+    color: white;
+}
+
+/* ON/OFF Buttons */
+.control-buttons {
+    margin-top: 10px;
+}
+
+.on-btn, .off-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.on-btn {
+    background: green;
+    color: white;
+}
+
+.off-btn {
+    background: red;
+    color: white;
+}
+
+/* History Box */
+.history-box {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    position: relative;
+}
+
+/* Show history when active */
+.history-box.active {
+    display: block;
+}
+
+/* Hide calculator when history is active */
+.hidden {
+    display: none;
+}
+
+/* History Title */
+.history-box h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* History List (Scrollable) */
+#history-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 250px;  /* Fixed height to ensure scrolling */
+    overflow-y: auto;  /* Enable scrolling */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+/* Ensure each list item is displayed properly */
+#history-list li {
+    font-size: 1rem;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Remove border for last item */
+#history-list li:last-child {
+    border-bottom: none;
+}
+
+/* Custom Scrollbar Styling */
+#history-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#history-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#history-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#history-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* History Buttons */
+.clear-history-btn,
+.back-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background 0.3s ease;
+    width: 120px;
+}
+
+.clear-history-btn:hover {
+    background: #d43f3f;
+}
+
+.back-btn {
+    background: #007bff;
+}
+
+.back-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .history-box {
+        width: 95%;
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    #history-list {
+        height: 200px; /* Reduce height for smaller screens */
+    }
+
+    .clear-history-btn,
+    .back-btn {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
